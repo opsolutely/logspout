@@ -1,7 +1,7 @@
 FROM alpine:3.5
 ENTRYPOINT ["/bin/logspout"]
 VOLUME /mnt/routes
-EXPOSE 80
+EXPOSE 9980
 
 COPY . /src
 RUN cd /src && ./build.sh "$(cat VERSION)"
